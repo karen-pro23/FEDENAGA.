@@ -1,0 +1,164 @@
+---
+// Services.astro — Compra y Venta de Ganado section
+---
+
+<section id="servicios" class="section" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">Nuestro Portafolio</span>
+      <h2 id="services-heading">Servicios Comerciales</h2>
+      <p>
+        Facilitamos la compra y venta de ganado con total garantía sanitaria, 
+        legal y transparencia de precios.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Compra -->
+      <article class="card card--bordered service-card animate-on-scroll">
+        <div class="service-icon-wrap">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+        </div>
+        <h3>Adquisición de Ganado</h3>
+        <p>
+          Ofrecemos un catálogo rigurosamente seleccionado de lotes de ganado para cría, 
+          engorde o beneficio, con total garantía sanitaria y legal. Cada animal cuenta 
+          con documentación completa y trazabilidad verificable.
+        </p>
+        <ul class="service-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Lotes certificados sanitariamente
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Genética de alta calidad
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Asesoría personalizada
+          </li>
+        </ul>
+        <a href="#contacto" class="btn btn-primary service-btn">Ver Catálogo de Compra</a>
+      </article>
+
+      <!-- Venta -->
+      <article class="card card--bordered service-card animate-on-scroll">
+        <div class="service-icon-wrap">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <h3>Comercialización y Venta</h3>
+        <p>
+          Ayudamos a los productores a colocar sus lotes de ganado en mercados clave, 
+          asegurando transacciones seguras, pesajes justos y cotizaciones actualizadas 
+          en tiempo real.
+        </p>
+        <ul class="service-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Acceso a mercados nacionales
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Pesaje certificado y transparente
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Cotizaciones en tiempo real
+          </li>
+        </ul>
+        <a href="#contacto" class="btn btn-outline--dark service-btn">Consignar mi Lote</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-2xl);
+    text-align: left;
+    transition: all var(--transition-base);
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+  }
+
+  .service-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-warm) 100%);
+    color: var(--primary);
+    margin-bottom: var(--space-lg);
+  }
+
+  .service-card h3 {
+    font-size: var(--font-size-2xl);
+    color: var(--text-dark);
+    margin-bottom: var(--space-md);
+  }
+
+  .service-card > p {
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+    flex-grow: 1;
+  }
+
+  .service-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+  }
+
+  .service-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .service-features li svg {
+    color: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .service-btn {
+    align-self: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-btn {
+      align-self: stretch;
+      text-align: center;
+    }
+  }
+</style>

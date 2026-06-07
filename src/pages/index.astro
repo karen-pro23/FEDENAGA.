@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FEDENAGA - Impulsando la Ganadería Nacional">
+  <!-- HEADER -->
+  <header style="background-color: var(--white); border-bottom: 4px solid var(--primary); padding: 1rem 0;">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      <a href="#" aria-label="Inicio FEDENAGA">
+        <!-- Reemplazar src con la ruta de tu logo basado en la Captura de pantalla 2026-06-05 095921.png -->
+        <img src="/images/logo-fedenaga.png" alt="Logo de FEDENAGA" style="height: 90px; width: auto;" />
+      </a>
+      <nav aria-label="Navegación principal">
+        <ul style="display: flex; list-style: none; gap: 2rem; margin: 0; padding: 0;">
+          <li><a href="#nosotros" style="color: var(--text-dark); text-decoration: none; font-weight: 600;">Quiénes Somos</a></li>
+          <li><a href="#mision-vision" style="color: var(--text-dark); text-decoration: none; font-weight: 600;">Misión y Visión</a></li>
+          <li><a href="#servicios" style="color: var(--text-dark); text-decoration: none; font-weight: 600;">Compra y Venta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section style="background: linear-gradient(rgba(139, 29, 34, 0.85), rgba(26, 26, 26, 0.85)), url('/images/hero-bg.png') center/cover no-repeat; color: var(--white); padding: 8rem 0; text-align: center;">
+      <div class="container">
+        <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Fuerza Ganadera que Alimenta al País</h1>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto; color: #f5f5f5;">
+          Garantizamos la excelencia en la comercialización, distribución y desarrollo del sector pecuario nacional.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="#servicios" style="background-color: var(--white); color: var(--primary); padding: 0.8rem 2rem; font-weight: bold; text-decoration: none; border-radius: 4px;">Comprar Ganado</a>
+          <a href="#contacto" style="background-color: transparent; color: var(--white); padding: 0.8rem 2rem; font-weight: bold; text-decoration: none; border: 2px solid var(--white); border-radius: 4px;">Contactar un Asesor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="nosotros" style="padding: 5rem 0; background-color: var(--white);">
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+        <div>
+          <h2 style="color: var(--primary); font-size: 2rem; margin-bottom: 1rem;">Quiénes Somos</h2>
+          <p style="color: var(--text-muted); font-size: 1.1rem;">
+            En FEDENAGA representamos y defendemos el esfuerzo de los productores ganaderos del país. Nos dedicamos a optimizar los canales de producción y comercio, asegurando estándares de calidad óptimos tanto para el productor como para el consumidor final.
+          </p>
+        </div>
+        <div style="background-color: var(--bg-light); border-left: 8px solid var(--primary); padding: 2rem; border-radius: 4px;">
+          <h3 style="margin-top: 0; color: var(--primary);">Compromiso con el Campo</h3>
+          <p style="margin-bottom: 0;">Trabajamos mano a mano con asociaciones locales para brindar transparencia de precios y trazabilidad en cada animal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN (Fondo Gris Claro para contraste estructural) -->
+    <section id="mision-vision" style="padding: 5rem 0; background-color: var(--bg-light);">
+      <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div style="background-color: var(--white); padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <h2 style="color: var(--primary); margin-top: 0;">Nuestra Misión</h2>
+          <p style="color: var(--text-muted);">Proveer una plataforma gremial, técnica y comercial sólida que potencie la actividad ganadera, facilitando la compra y venta justa, sustentable y eficiente de ganado en todo el territorio nacional.</p>
+        </div>
+        <div style="background-color: var(--white); padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+          <h2 style="color: var(--primary); margin-top: 0;">Nuestra Visión</h2>
+          <p style="color: var(--text-muted);">Ser el referente absoluto de confianza comercial y desarrollo tecnológico en el sector agropecuario, consolidando la soberanía alimentaria con ganado de genética y salud certificada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPRA Y VENTA -->
+    <section id="servicios" style="padding: 5rem 0; background-color: var(--white);">
+      <div class="container">
+        <h2 style="text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 3rem;">Nuestros Servicios Comerciales</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+          <!-- Compra -->
+          <div style="border: 2px solid #e1e1e1; border-top: 6px solid var(--primary); padding: 2rem; border-radius: 4px; text-align: center;">
+            <h3 style="font-size: 1.5rem; color: var(--text-dark);">Adquisición / Compra de Ganado</h3>
+            <p style="color: var(--text-muted); text-align: left;">Ofrecemos un catálogo rigurosamente seleccionado de lotes de ganado para cría, engorde o beneficio, con total garantía sanitaria y legal.</p>
+            <a href="#" style="display: inline-block; background-color: var(--primary); color: var(--white); padding: 0.7rem 1.5rem; text-decoration: none; font-weight: bold; margin-top: 1rem; border-radius: 4px;">Ver Catálogo de Compra</a>
+          </div>
+
+          <!-- Venta -->
+          <div style="border: 2px solid #e1e1e1; border-top: 6px solid var(--primary); padding: 2rem; border-radius: 4px; text-align: center;">
+            <h3 style="font-size: 1.5rem; color: var(--text-dark);">Comercialización / Venta</h3>
+            <p style="color: var(--text-muted); text-align: left;">Ayudamos a los productores a colocar sus lotes de ganado en mercados clave, asegurando transacciones seguras, pesajes justos y cotizaciones actualizadas.</p>
+            <a href="#" style="display: inline-block; background-color: var(--primary); color: var(--white); padding: 0.7rem 1.5rem; text-decoration: none; font-weight: bold; margin-top: 1rem; border-radius: 4px;">Consignar mi Lote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contacto" style="background-color: var(--text-dark); color: var(--white); padding: 3rem 0; margin-top: 4rem;">
+    <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+      <div>
+        <p style="font-weight: bold; font-size: 1.2rem; margin: 0 0 0.5rem 0;">FEDENAGA</p>
+        <p style="color: #ccc; margin: 0;">Federación Nacional de Ganaderos de Venezuela</p>
+      </div>
+      <div>
+        <p style="margin: 0 0 0.5rem 0; font-weight: bold;">Contacto Legal y Comercial</p>
+        <p style="color: #ccc; margin: 0;">Email: contacto@fedenaga.org</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #333; text-align: center; color: #888; font-size: 0.9rem;">
+      <p>&copy; 2026 FEDENAGA. Desarrollado bajo estándares WCAG de accesibilidad.</p>
+    </div>
+  </footer>
+</Layout>

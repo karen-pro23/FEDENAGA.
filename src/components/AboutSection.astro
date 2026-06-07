@@ -1,0 +1,130 @@
+---
+// AboutSection.astro — Quiénes Somos with grid layout
+---
+
+<section id="nosotros" class="section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text animate-on-scroll">
+        <span class="badge">Nuestra Historia</span>
+        <h2 id="about-heading">Quiénes Somos</h2>
+        <div class="divider"></div>
+        <p>
+          En <strong>FEDENAGA</strong> representamos y defendemos el esfuerzo de los productores 
+          ganaderos del país desde nuestra fundación el <strong>19 de marzo de 1962</strong> en Valencia, 
+          Venezuela. Nos dedicamos a optimizar los canales de producción y comercio, asegurando 
+          estándares de calidad óptimos tanto para el productor como para el consumidor final.
+        </p>
+        <p>
+          Como Federación Nacional, articulamos esfuerzos con asociaciones y productores en los 
+          24 estados del territorio, promoviendo prácticas sustentables, innovación tecnológica 
+          y políticas públicas que fortalezcan la soberanía alimentaria.
+        </p>
+      </div>
+
+      <div class="about-sidebar animate-on-scroll">
+        <div class="card card--accent about-card">
+          <div class="about-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Compromiso con el Campo</h3>
+          <p>
+            Trabajamos mano a mano con asociaciones locales para brindar transparencia 
+            de precios, trazabilidad en cada animal y acceso a mercados justos para 
+            todos los productores.
+          </p>
+        </div>
+        
+        <div class="card card--accent about-card">
+          <div class="about-card-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+              <path d="M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <h3>Red Gremial Nacional</h3>
+          <p>
+            Más de 60 años construyendo la red gremial ganadera más importante 
+            del país, con presencia activa en cada rincón de Venezuela.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .about-text h2 {
+    margin-top: var(--space-md);
+    margin-bottom: 0;
+  }
+
+  .about-text .divider {
+    margin-bottom: var(--space-lg);
+  }
+
+  .about-text p {
+    margin-bottom: var(--space-md);
+  }
+
+  .about-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-text strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .about-card {
+    padding: var(--space-xl);
+  }
+
+  .about-card h3 {
+    color: var(--primary);
+    font-size: var(--font-size-xl);
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-sm);
+  }
+
+  .about-card p {
+    font-size: var(--font-size-base);
+    margin-bottom: 0;
+    line-height: 1.7;
+  }
+
+  .about-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background-color: var(--primary-light);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+  }
+
+  @media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+  }
+</style>
