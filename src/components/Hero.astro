@@ -1,71 +1,164 @@
 ---
-// Hero.astro — Full-width hero section with CTA buttons
+// Hero.astro — Immersive Hero with animated counters and live cattle market card
 ---
 
 <section class="hero" aria-label="Presentación principal de FEDENAGA">
   <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <span class="badge hero-badge" style="animation: fadeInUp 0.6s ease both;"
-      >Desde 1962</span
-    >
-    <h1 class="hero-title">Fuerza Ganadera que<br />Alimenta al País</h1>
-    <p class="hero-subtitle">
-      Garantizamos la excelencia en la comercialización, distribución y
-      desarrollo del sector pecuario nacional. Somos la voz de los productores
-      ganaderos de Venezuela.
-    </p>
-    <div class="hero-actions">
-      <a href="#servicios" class="btn btn-white">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <path d="M16 10a4 4 0 01-8 0"></path>
-        </svg>
-        Comprar Ganado
-      </a>
-      <a href="#contacto" class="btn btn-outline">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path
-            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-          ></path>
-        </svg>
-        Contactar un Asesor
-      </a>
+  <div class="hero-grain"></div>
+
+  <div class="container hero-grid">
+    <!-- Left Column: Institutional Authority & CTA -->
+    <div class="hero-content">
+      <div class="hero-badges">
+        <span class="badge hero-badge">
+          <span class="badge-dot"></span>
+          Federación Nacional · Desde 1962
+        </span>
+        <span class="badge badge--gold hero-badge-secondary">
+          Soberanía Agroalimentaria
+        </span>
+      </div>
+
+      <h1 class="hero-title">
+        La Fuerza Ganadera que <span class="text-highlight">Alimenta y Mueve</span> a Venezuela
+      </h1>
+
+      <p class="hero-subtitle">
+        Articulamos a las asociaciones y productores agropecuarios en los 24 estados del país. Impulsamos genética certificada, trazabilidad sanitaria y comercialización justa del rebaño nacional.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#servicios" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 3v18h18"></path>
+            <path d="m19 9-5 5-4-4-3 3"></path>
+          </svg>
+          Explorar Mercado y Lotes
+        </a>
+        <a href="#nosotros" class="btn btn-outline btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Mapa Pecuario Nacional
+        </a>
+      </div>
+
+      <!-- Animated Key Metrics -->
+      <div class="hero-stats" id="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-value">
+            <span class="counter" data-target="64">0</span>+
+          </div>
+          <span class="hero-stat-label">Años de Liderazgo Gremial</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">
+            <span class="counter" data-target="85">0</span>+
+          </div>
+          <span class="hero-stat-label">Asociaciones Base</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <div class="hero-stat-value">
+            <span class="counter" data-target="96">0</span>%
+          </div>
+          <span class="hero-stat-label">Proteína Nacional Producida</span>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-number">60+</span>
-        <span class="hero-stat-label">Años de experiencia</span>
+
+    <!-- Right Column: Interactive Live Monitor Card -->
+    <aside class="hero-showcase" aria-label="Monitor referencial pecuario">
+      <div class="showcase-card">
+        <div class="showcase-header">
+          <div>
+            <span class="showcase-tag">
+              <span class="live-indicator"></span>
+              Observatorio Pecuario FEDENAGA
+            </span>
+            <h2 class="showcase-title">Referencia Nacional en Pie y Canal</h2>
+          </div>
+          <span class="showcase-badge">Bovino / Bufalino</span>
+        </div>
+
+        <div class="showcase-metrics">
+          <div class="metric-row">
+            <div class="metric-info">
+              <span class="metric-name">Toro Cebado (En Pie)</span>
+              <span class="metric-region">Promedio Llanos / Occidente</span>
+            </div>
+            <div class="metric-price">
+              <span class="price-val">Ref. $1.85</span>
+              <span class="price-unit">/ kg</span>
+              <span class="price-trend up">+2.4%</span>
+            </div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-info">
+              <span class="metric-name">Carne en Canal (Tipo A)</span>
+              <span class="metric-region">Frigoríficos Certificados</span>
+            </div>
+            <div class="metric-price">
+              <span class="price-val">Ref. $3.70</span>
+              <span class="price-unit">/ kg</span>
+              <span class="price-trend up">+1.8%</span>
+            </div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-info">
+              <span class="metric-name">Leche Cruda a Puerta de Corral</span>
+              <span class="metric-region">Cuenca Zulia / Andes / Guárico</span>
+            </div>
+            <div class="metric-price">
+              <span class="price-val">Ref. $0.58</span>
+              <span class="price-unit">/ L</span>
+              <span class="price-trend neutral">Estable</span>
+            </div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-info">
+              <span class="metric-name">Maute de Levante (F1 / Brahman)</span>
+              <span class="metric-region">Subastas Asociadas</span>
+            </div>
+            <div class="metric-price">
+              <span class="price-val">Ref. $1.95</span>
+              <span class="price-unit">/ kg</span>
+              <span class="price-trend up">+3.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-footer">
+          <div class="sanitary-seal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <span>Trazabilidad FUVAS / Fiebre Aftosa Vigilada</span>
+          </div>
+          <a href="#servicios" class="showcase-link">Calcular Lote →</a>
+        </div>
       </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">24</span>
-        <span class="hero-stat-label">Estados cubiertos</span>
-      </div>
-      <div class="hero-stat-divider"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-number">100%</span>
-        <span class="hero-stat-label">Compromiso gremial</span>
+    </aside>
+  </div>
+
+  <!-- Live Bottom Ticker -->
+  <div class="market-ticker" id="indicadores" aria-label="Cinta de indicadores agropecuarios">
+    <div class="container ticker-inner">
+      <span class="ticker-label">PULSO DEL CAMPO:</span>
+      <div class="ticker-items">
+        <span class="ticker-item"><strong>Rebaño Nacional Estimado:</strong> +13.5M Cabezas (Bovino y Bufalino)</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item"><strong>Estados Productores:</strong> 24 Entidades Federales Activas</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item"><strong>Razas Predominantes:</strong> Brahman, Carora, Girolando, Senepol, Murrah</span>
+        <span class="ticker-sep">•</span>
+        <span class="ticker-item"><strong>Certificación:</strong> Campaña Nacional de Erradicación de Fiebre Aftosa</span>
       </div>
     </div>
   </div>
@@ -74,10 +167,10 @@
 <style>
   .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - var(--header-height));
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url("/images/hero-bg.png");
     background-size: cover;
     background-position: center;
@@ -90,131 +183,406 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.55) 50%,
-      rgba(0, 0, 0, 0.7) 100%
+      115deg,
+      rgba(15, 17, 19, 0.92) 0%,
+      rgba(45, 12, 14, 0.84) 52%,
+      rgba(17, 19, 21, 0.88) 100%
     );
     z-index: 1;
   }
 
-  .hero-content {
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(212, 155, 53, 0.12) 1px, transparent 1px);
+    background-size: 32px 32px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-grid {
     position: relative;
     z-index: 2;
-    text-align: center;
-    padding: var(--space-3xl) 0;
+    display: grid;
+    grid-template-columns: 1.25fr 0.95fr;
+    gap: var(--space-2xl);
+    align-items: center;
+    padding: 4.5rem 1.5rem 3.5rem;
+    flex: 1;
+  }
+
+  .hero-content {
     animation: fadeInUp 0.8s ease both;
   }
 
-  .hero-badge {
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
     margin-bottom: var(--space-lg);
-    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .hero-badge {
+    background: rgba(255, 255, 255, 0.12);
     color: var(--white);
     border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+  }
+
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--accent-gold);
+  }
+
+  .hero-badge-secondary {
+    background: rgba(212, 155, 53, 0.18);
+    color: #FCD34D;
+    border: 1px solid rgba(212, 155, 53, 0.4);
   }
 
   .hero-title {
-    font-size: var(--font-size-5xl);
+    font-size: clamp(2.4rem, 4.5vw, 3.85rem);
     font-weight: 800;
     color: var(--white);
     margin-bottom: var(--space-lg);
     letter-spacing: -0.03em;
-    line-height: 1.1;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    line-height: 1.08;
+  }
+
+  .text-highlight {
+    background: linear-gradient(95deg, #FDE68A 0%, var(--accent-gold) 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-subtitle {
-    font-size: var(--font-size-xl);
-    color: rgba(255, 255, 255, 0.88);
-    max-width: 680px;
-    margin: 0 auto var(--space-2xl);
+    font-size: var(--font-size-lg);
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 620px;
+    margin-bottom: var(--space-xl);
     line-height: 1.7;
   }
 
   .hero-actions {
     display: flex;
     gap: var(--space-md);
-    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
   }
 
+  .btn-lg {
+    padding: 1rem 1.85rem;
+    font-size: var(--font-size-base);
+  }
+
+  /* Hero Stats */
   .hero-stats {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: var(--space-xl);
     flex-wrap: wrap;
-    padding-top: var(--space-2xl);
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: var(--space-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
   }
 
-  .hero-stat {
-    text-align: center;
-  }
-
-  .hero-stat-number {
-    display: block;
+  .hero-stat-value {
+    font-family: var(--font-display);
     font-size: var(--font-size-3xl);
     font-weight: 800;
-    color: var(--white);
+    color: var(--accent-gold);
     line-height: 1;
-    margin-bottom: var(--space-xs);
+    margin-bottom: 0.3rem;
   }
 
   .hero-stat-label {
-    font-size: var(--font-size-sm);
-    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.75);
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .hero-stat-divider {
     width: 1px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.2);
+    height: 44px;
+    background: rgba(255, 255, 255, 0.18);
   }
 
-  @media (max-width: 768px) {
-    .hero {
-      min-height: auto;
-      padding: var(--space-2xl) 0;
-    }
+  /* Right Column Showcase Card */
+  .hero-showcase {
+    animation: fadeInUp 1s ease 0.15s both;
+  }
 
-    .hero-content {
-      padding: var(--space-2xl) 0;
-    }
+  .showcase-card {
+    background: rgba(20, 22, 25, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-top: 3px solid var(--accent-gold);
+    border-radius: var(--radius-xl);
+    padding: 1.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+  }
 
-    .hero-title {
-      font-size: var(--font-size-3xl);
-      line-height: 1.15;
-    }
+  .showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.25rem;
+  }
 
-    .hero-subtitle {
-      font-size: var(--font-size-base);
-    }
+  .showcase-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #4ADE80;
+    margin-bottom: 0.35rem;
+  }
 
+  .live-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ADE80;
+    box-shadow: 0 0 10px #4ADE80;
+    animation: pulseDot 2s infinite;
+  }
+
+  .showcase-title {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin: 0;
+  }
+
+  .showcase-badge {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+  }
+
+  .showcase-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .metric-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+  }
+
+  .metric-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .metric-name {
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    color: var(--white);
+  }
+
+  .metric-region {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .metric-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    text-align: right;
+  }
+
+  .price-val {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #FDE68A;
+  }
+
+  .price-unit {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .price-trend {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-sm);
+    margin-left: 0.25rem;
+  }
+
+  .price-trend.up {
+    background: rgba(74, 222, 128, 0.16);
+    color: #4ADE80;
+  }
+
+  .price-trend.neutral {
+    background: rgba(250, 204, 21, 0.16);
+    color: #FACC15;
+  }
+
+  .showcase-footer {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .sanitary-seal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .sanitary-seal svg {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+  }
+
+  .showcase-link {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: #FDE68A;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color var(--transition-fast);
+  }
+
+  .showcase-link:hover {
+    color: var(--white);
+  }
+
+  /* Bottom Ticker Bar */
+  .market-ticker {
+    position: relative;
+    z-index: 2;
+    background: rgba(13, 15, 17, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.85rem 0;
+  }
+
+  .ticker-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .ticker-label {
+    font-size: var(--font-size-xs);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.65rem;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  .ticker-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .ticker-item strong {
+    color: #FDE68A;
+  }
+
+  .ticker-sep {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      padding: 3.5rem 1.5rem 2.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
     .hero-actions {
       flex-direction: column;
-      align-items: center;
     }
 
     .hero-actions .btn {
       width: 100%;
-      max-width: 280px;
-    }
-
-    .hero-stats {
-      gap: var(--space-lg);
     }
 
     .hero-stat-divider {
       display: none;
     }
 
-    .hero-stat-number {
-      font-size: var(--font-size-2xl);
+    .metric-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
     }
   }
 </style>
+
+<script>
+  // Animated Number Counter for Hero Metrics
+  const counters = document.querySelectorAll('.counter');
+  const animateCounters = () => {
+    counters.forEach((counter) => {
+      const target = Number(counter.getAttribute('data-target') || 0);
+      const duration = 1600;
+      const startTime = performance.now();
+
+      const updateCount = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = String(Math.floor(easeOut * target));
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.textContent = String(target);
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    });
+  };
+
+  animateCounters();
+</script>

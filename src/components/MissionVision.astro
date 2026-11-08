@@ -1,49 +1,50 @@
 ---
-// MissionVision.astro — Misión y Visión dual card layout
+// MissionVision.astro — Misión, Visión & Strategic Guild Pillars
 ---
 
-<section id="mision-vision" class="section section--light" aria-labelledby="mv-heading">
+<section id="mision-vision" class="section" aria-labelledby="mv-heading">
   <div class="container">
-    <div class="section-header">
-      <span class="badge">Lo que nos guía</span>
-      <h2 id="mv-heading">Misión y Visión</h2>
+    <div class="section-header animate-on-scroll">
+      <span class="badge">Horizonte Institucional</span>
+      <h2 id="mv-heading">Misión, Visión y Valores Gremiales</h2>
+      <p>
+        Más de seis décadas defendiendo al productor venezolano y construyendo las bases de una ganadería sustentable, rentable y soberana.
+      </p>
     </div>
 
     <div class="mv-grid">
-      <article class="card mv-card animate-on-scroll">
-        <div class="mv-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 16v-4"/>
-            <path d="M12 8h.01"/>
-          </svg>
+      <article class="card mv-card mv-card--mission animate-on-scroll">
+        <div class="mv-top">
+          <div class="mv-icon">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <span class="mv-number">01</span>
         </div>
         <h3>Nuestra Misión</h3>
         <p>
-          Proveer una plataforma gremial, técnica y comercial sólida que potencie la actividad 
-          ganadera, facilitando la compra y venta justa, sustentable y eficiente de ganado en 
-          todo el territorio nacional. Defendemos los intereses de los productores y velamos 
-          por la seguridad alimentaria del país.
+          Representar, defender y articular a los productores y asociaciones ganaderas de Venezuela, proveyendo una plataforma gremial, técnica y comercial que impulse la comercialización justa, la seguridad jurídica en el campo y el abastecimiento soberano de carne y leche de calidad.
         </p>
       </article>
 
-      <article class="card mv-card animate-on-scroll">
-        <div class="mv-icon">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-          </svg>
+      <article class="card mv-card mv-card--vision animate-on-scroll">
+        <div class="mv-top">
+          <div class="mv-icon mv-icon--gold">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <span class="mv-number">02</span>
         </div>
         <h3>Nuestra Visión</h3>
         <p>
-          Ser el referente absoluto de confianza comercial y desarrollo tecnológico en el 
-          sector agropecuario, consolidando la soberanía alimentaria con ganado de genética 
-          y salud certificada. Aspiramos a un campo venezolano próspero, competitivo y 
-          reconocido internacionalmente.
+          Consolidar a Venezuela como una potencia agroalimentaria tropical libre de fiebre aftosa con vacunación certificada, líder en genética bovina y bufalina en América Latina, con capacidad plena de abastecer al país y exportar proteína con sello de excelencia.
         </p>
       </article>
     </div>
 
-    <!-- Values row -->
+    <!-- Core Values Grid -->
     <div class="values-row">
       <div class="value-item animate-on-scroll">
         <div class="value-icon">
@@ -52,18 +53,20 @@
             <polyline points="22 4 12 14.01 9 11.01"/>
           </svg>
         </div>
-        <h4>Transparencia</h4>
-        <p>Procesos claros y verificables en cada transacción comercial</p>
+        <h4>Transparencia Comercial</h4>
+        <p>Cotizaciones referenciales claras, pesajes auditados y trazabilidad desde la finca hasta el consumidor.</p>
       </div>
+
       <div class="value-item animate-on-scroll">
         <div class="value-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h4>Integridad</h4>
-        <p>Compromiso ético con los productores y consumidores</p>
+        <h4>Defensa del Productor</h4>
+        <p>Respaldo institucional firme ante los retos económicos, jurídicos, energéticos y de seguridad rural.</p>
       </div>
+
       <div class="value-item animate-on-scroll">
         <div class="value-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -72,9 +75,10 @@
             <path d="M6 20v-6"/>
           </svg>
         </div>
-        <h4>Innovación</h4>
-        <p>Tecnología y mejora continua al servicio del campo</p>
+        <h4>Innovación Genética</h4>
+        <p>Promoción de biotecnología reproductiva, pasturas regenerativas y razas adaptadas al trópico.</p>
       </div>
+
       <div class="value-item animate-on-scroll">
         <div class="value-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -83,8 +87,8 @@
             <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
           </svg>
         </div>
-        <h4>Alcance Nacional</h4>
-        <p>Presencia en los 24 estados del territorio venezolano</p>
+        <h4>Unidad Nacional</h4>
+        <p>Articulación permanente con las asociaciones regionales en los 24 estados de Venezuela.</p>
       </div>
     </div>
   </div>
@@ -99,30 +103,60 @@
   }
 
   .mv-card {
-    text-align: center;
-    padding: var(--space-2xl) var(--space-xl);
+    padding: var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mv-card--mission {
+    border-top: 5px solid var(--primary);
+  }
+
+  .mv-card--vision {
+    border-top: 5px solid var(--accent-gold);
+  }
+
+  .mv-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
   }
 
   .mv-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
     background: var(--primary-light);
     color: var(--primary);
-    margin-bottom: var(--space-lg);
+  }
+
+  .mv-icon--gold {
+    background: var(--accent-gold-light);
+    color: #966611;
+  }
+
+  .mv-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(20, 22, 25, 0.07);
+    line-height: 1;
   }
 
   .mv-card h3 {
-    color: var(--primary);
+    font-size: var(--font-size-2xl);
+    color: var(--text-dark);
     margin-bottom: var(--space-md);
   }
 
   .mv-card p {
     font-size: var(--font-size-base);
     line-height: 1.8;
+    margin: 0;
   }
 
   /* Values Row */
@@ -135,8 +169,16 @@
   }
 
   .value-item {
-    text-align: center;
-    padding: var(--space-lg) var(--space-md);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    transition: transform var(--transition-base), border-color var(--transition-base);
+  }
+
+  .value-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
   }
 
   .value-icon {
@@ -148,34 +190,30 @@
     border-radius: var(--radius-md);
     background: var(--white);
     color: var(--primary);
-    margin-bottom: var(--space-sm);
+    margin-bottom: var(--space-md);
     box-shadow: var(--shadow-sm);
   }
 
   .value-item h4 {
     font-size: var(--font-size-base);
     color: var(--text-dark);
-    margin-bottom: var(--space-xs);
+    margin-bottom: 0.4rem;
   }
 
   .value-item p {
     font-size: var(--font-size-sm);
-    color: var(--text-light);
+    color: var(--text-muted);
     line-height: 1.6;
+    margin: 0;
   }
 
-  @media (max-width: 768px) {
-    .mv-grid {
-      grid-template-columns: 1fr;
-    }
-
+  @media (max-width: 960px) {
     .values-row {
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-md);
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 560px) {
     .values-row {
       grid-template-columns: 1fr;
     }

@@ -1,56 +1,135 @@
 ---
-// AboutSection.astro — Quiénes Somos with grid layout
+// AboutSection.astro — Institutional history & interactive Venezuelan cattle regions explorer
 ---
 
 <section id="nosotros" class="section" aria-labelledby="about-heading">
   <div class="container">
+    <!-- Top Institutional Block -->
     <div class="about-grid">
       <div class="about-text animate-on-scroll">
-        <span class="badge">Nuestra Historia</span>
-        <h2 id="about-heading">Quiénes Somos</h2>
+        <span class="badge">Nuestra Historia · Desde 1962</span>
+        <h2 id="about-heading">La Casa Matriz del Productor Agropecuario Venezolano</h2>
         <div class="divider"></div>
-        <p>
-          En <strong>FEDENAGA</strong> representamos y defendemos el esfuerzo de los productores 
-          ganaderos del país desde nuestra fundación el <strong>19 de marzo de 1962</strong> en Valencia, 
-          Venezuela. Nos dedicamos a optimizar los canales de producción y comercio, asegurando 
-          estándares de calidad óptimos tanto para el productor como para el consumidor final.
+        <p class="lead-paragraph">
+          Fundada el <strong>19 de marzo de 1962</strong> en Valencia, Estado Carabobo, la 
+          <strong>Federación Nacional de Ganaderos de Venezuela (FEDENAGA)</strong> nació con la misión 
+          histórica de unir, representar y defender el esfuerzo de los hombres y mujeres del campo.
         </p>
         <p>
-          Como Federación Nacional, articulamos esfuerzos con asociaciones y productores en los 
-          24 estados del territorio, promoviendo prácticas sustentables, innovación tecnológica 
-          y políticas públicas que fortalezcan la soberanía alimentaria.
+          Hoy articulamos a más de <strong>85 asociaciones ganaderas</strong> de base distribuidas en los 24 estados del territorio nacional. Impulsamos la modernización genética, la sanidad animal, la seguridad jurídica rural y los canales de comercialización transparente del ganado bovino y bufalino.
         </p>
+
+        <div class="pillars-mini">
+          <div class="pillar-chip">
+            <span class="chip-icon">✓</span> Defensa Gremial y Jurídica
+          </div>
+          <div class="pillar-chip">
+            <span class="chip-icon">✓</span> Mejoramiento Genético Tropical
+          </div>
+          <div class="pillar-chip">
+            <span class="chip-icon">✓</span> Sanidad y Erradicación de Aftosa
+          </div>
+          <div class="pillar-chip">
+            <span class="chip-icon">✓</span> Abastecimiento Soberano
+          </div>
+        </div>
       </div>
 
       <div class="about-sidebar animate-on-scroll">
         <div class="card card--accent about-card">
-          <div class="about-card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
+          <div class="about-card-head">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="card-kicker">Garantía Sanitaria</span>
+              <h3>Trazabilidad y Confianza</h3>
+            </div>
           </div>
-          <h3>Compromiso con el Campo</h3>
           <p>
-            Trabajamos mano a mano con asociaciones locales para brindar transparencia 
-            de precios, trazabilidad en cada animal y acceso a mercados justos para 
-            todos los productores.
+            Trabajamos junto a fundaciones técnicas y asociaciones regionales para asegurar ciclos de vacunación verificables, guías de movilización transparentes y control sanitario riguroso.
           </p>
         </div>
         
         <div class="card card--accent about-card">
-          <div class="about-card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 00-3-3.87"/>
-              <path d="M16 3.13a4 4 0 010 7.75"/>
-            </svg>
+          <div class="about-card-head">
+            <div class="about-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                <path d="M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <span class="card-kicker">Fuerza Productiva</span>
+              <h3>Red Gremial en 24 Estados</h3>
+            </div>
           </div>
-          <h3>Red Gremial Nacional</h3>
           <p>
-            Más de 60 años construyendo la red gremial ganadera más importante 
-            del país, con presencia activa en cada rincón de Venezuela.
+            Desde el Lago de Maracaibo hasta el Orinoco y los Andes, conectamos al productor primario con la agroindustria y las cadenas de distribución nacional.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Venezuelan Cattle Regions Explorer -->
+    <div class="regions-explorer animate-on-scroll">
+      <div class="regions-header">
+        <div>
+          <span class="badge badge--green">Geografía Productiva</span>
+          <h3>Ejes Ganaderos de Venezuela</h3>
+          <p>Seleccioná una región para explorar su vocación pecuaria, razas predominantes y aporte al rebaño nacional.</p>
+        </div>
+        <div class="region-tabs" role="tablist" aria-label="Ejes ganaderos de Venezuela">
+          <button class="region-tab active" role="tab" aria-selected="true" data-region="llanos">
+            Eje Los Llanos
+          </button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="occidente">
+            Zulia y Occidente
+          </button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="andes">
+            Eje Andino
+          </button>
+          <button class="region-tab" role="tab" aria-selected="false" data-region="oriente">
+            Oriente y Guayana
+          </button>
+        </div>
+      </div>
+
+      <div class="region-display" id="region-display">
+        <div class="region-main">
+          <div class="region-badge-row">
+            <span class="region-code" id="reg-states">Apure · Barinas · Guárico · Cojedes · Portuguesa</span>
+            <span class="region-share" id="reg-share">~48% del Rebaño Nacional</span>
+          </div>
+          <h4 id="reg-title">Eje Los Llanos: El Corazón de la Cría y Ceba Extensiva</h4>
+          <p id="reg-desc">
+            La gran sabana venezolana concentra el mayor volumen de ganado de carne y cría del país. Destaca por su extraordinaria adaptación de razas cebuínas y el acelerado crecimiento del rebaño bufalino en esteros y sabanas inundables.
+          </p>
+          <div class="region-tags" id="reg-breeds">
+            <span class="breed-tag">Brahman Blanco y Rojo</span>
+            <span class="breed-tag">Búfalo Murrah / Mediterráneo</span>
+            <span class="breed-tag">Nelore</span>
+            <span class="breed-tag">F1 Cebú × Europeo</span>
+          </div>
+        </div>
+
+        <div class="region-metrics">
+          <div class="reg-stat-box">
+            <span class="reg-stat-label">Vocación Principal</span>
+            <strong class="reg-stat-val" id="reg-vocation">Cría, Levante y Ceba Completa</strong>
+          </div>
+          <div class="reg-stat-box">
+            <span class="reg-stat-label">Asociaciones Activas</span>
+            <strong class="reg-stat-val" id="reg-assocs">32 Asociaciones Federadas</strong>
+          </div>
+          <div class="reg-stat-box">
+            <span class="reg-stat-label">Producto Estrella</span>
+            <strong class="reg-stat-val" id="reg-product">Novillos en Pie y Queso Llanero</strong>
+          </div>
         </div>
       </div>
     </div>
@@ -60,31 +139,66 @@
 <style>
   .about-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.25fr 0.95fr;
     gap: var(--space-2xl);
     align-items: start;
+    margin-bottom: var(--space-3xl);
   }
 
   .about-text h2 {
-    margin-top: var(--space-md);
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    font-weight: 800;
+    margin-top: var(--space-sm);
     margin-bottom: 0;
   }
 
-  .about-text .divider {
-    margin-bottom: var(--space-lg);
+  .lead-paragraph {
+    font-size: var(--font-size-lg);
+    color: var(--text-dark);
+    line-height: 1.7;
   }
 
   .about-text p {
     margin-bottom: var(--space-md);
   }
 
-  .about-text p:last-child {
-    margin-bottom: 0;
+  .about-text strong {
+    color: var(--primary);
+    font-weight: 700;
   }
 
-  .about-text strong {
-    color: var(--text-dark);
+  .pillars-mini {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: var(--space-lg);
+  }
+
+  .pillar-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1rem;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
     font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .chip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 800;
+    flex-shrink: 0;
   }
 
   .about-sidebar {
@@ -97,15 +211,30 @@
     padding: var(--space-xl);
   }
 
+  .about-card-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .card-kicker {
+    display: block;
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+  }
+
   .about-card h3 {
     color: var(--primary);
     font-size: var(--font-size-xl);
-    margin-top: var(--space-sm);
-    margin-bottom: var(--space-sm);
+    margin: 0;
   }
 
   .about-card p {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     margin-bottom: 0;
     line-height: 1.7;
   }
@@ -119,12 +248,283 @@
     background-color: var(--primary-light);
     border-radius: var(--radius-md);
     color: var(--primary);
+    flex-shrink: 0;
   }
 
-  @media (max-width: 768px) {
-    .about-grid {
+  /* Interactive Regions Explorer */
+  .regions-explorer {
+    background: var(--bg-warm);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .regions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .regions-header h3 {
+    font-size: var(--font-size-2xl);
+    margin: 0.5rem 0 0.35rem;
+  }
+
+  .regions-header p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  .region-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: var(--white);
+    padding: 0.4rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+
+  .region-tab {
+    padding: 0.65rem 1.15rem;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--text-muted);
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .region-tab:hover {
+    color: var(--primary);
+    background: var(--primary-light);
+  }
+
+  .region-tab.active {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.25);
+  }
+
+  .region-display {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: var(--space-xl);
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: opacity 0.2s ease;
+  }
+
+  .region-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+
+  .region-code {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--primary);
+  }
+
+  .region-share {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    padding: 0.25rem 0.7rem;
+    border-radius: var(--radius-full);
+    background: var(--accent-gold-light);
+    color: #966611;
+  }
+
+  .region-main h4 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 0.65rem;
+  }
+
+  .region-main p {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .region-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .breed-tag {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text-dark);
+  }
+
+  .region-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    justify-content: center;
+    border-left: 1px solid var(--border);
+    padding-left: var(--space-xl);
+  }
+
+  .reg-stat-box {
+    background: var(--bg-light);
+    padding: 0.85rem 1.1rem;
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent-gold);
+  }
+
+  .reg-stat-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+  }
+
+  .reg-stat-val {
+    font-size: var(--font-size-sm);
+    color: var(--text-dark);
+  }
+
+  @media (max-width: 900px) {
+    .about-grid,
+    .region-display {
       grid-template-columns: 1fr;
-      gap: var(--space-xl);
+    }
+
+    .region-metrics {
+      border-left: none;
+      border-top: 1px solid var(--border);
+      padding-left: 0;
+      padding-top: var(--space-lg);
+    }
+
+    .pillars-mini {
+      grid-template-columns: 1fr;
     }
   }
 </style>
+
+<script>
+  interface RegionInfo {
+    states: string;
+    share: string;
+    title: string;
+    desc: string;
+    breeds: string[];
+    vocation: string;
+    assocs: string;
+    product: string;
+  }
+
+  const regionsData: Record<string, RegionInfo> = {
+    llanos: {
+      states: "Apure · Barinas · Guárico · Cojedes · Portuguesa",
+      share: "~48% del Rebaño Nacional",
+      title: "Eje Los Llanos: El Corazón de la Cría y Ceba Extensiva",
+      desc: "La gran sabana venezolana concentra el mayor volumen de ganado de carne y cría del país. Destaca por su extraordinaria adaptación de razas cebuínas y el acelerado crecimiento del rebaño bufalino en esteros y sabanas inundables.",
+      breeds: ["Brahman Blanco y Rojo", "Búfalo Murrah / Mediterráneo", "Nelore", "F1 Cebú × Europeo"],
+      vocation: "Cría, Levante y Ceba Completa",
+      assocs: "32 Asociaciones Federadas",
+      product: "Novillos en Pie y Queso Llanero"
+    },
+    occidente: {
+      states: "Zulia · Lara · Falcón · Yaracuy",
+      share: "~28% del Rebaño Nacional",
+      title: "Zulia y Centro-Occidente: Potencia Lechera y Doble Propósito",
+      desc: "Cuna de la ganadería tropical de doble propósito y de la raza sintética venezolana Carora. La cuenca del Lago de Maracaibo y el semiárido larense lideran la producción láctea e innovación en pasturas tecnificadas.",
+      breeds: ["Raza Carora (Patrimonio Nacional)", "Girolando", "Mestizo Doble Propósito", "Senepol"],
+      vocation: "Doble Propósito y Lechería Tropical",
+      assocs: "24 Asociaciones Federadas",
+      product: "Leche Cruda, Quesos Madurados y Carne"
+    },
+    andes: {
+      states: "Táchira · Mérida · Trujillo",
+      share: "~12% del Rebaño Nacional",
+      title: "Eje Andino: Genética de Altura y Pie de Monte",
+      desc: "Combina la ganadería intensiva de leche especializada en zonas altas con sistemas de ceba de alta eficiencia en el piedemonte andino-llanero, destacando en ferias agropecuarias históricas como ASOGATA.",
+      breeds: ["Holstein / Jersey (Altura)", "Gyr Lechero", "Brahman de Exposición", "F1 Lechero"],
+      vocation: "Lechería Especializada y Genética élite",
+      assocs: "15 Asociaciones Federadas",
+      product: "Lácteos Andinos y Reproductores Puros"
+    },
+    oriente: {
+      states: "Monagas · Anzoátegui · Bolívar · Delta Amacuro",
+      share: "~12% del Rebaño Nacional",
+      title: "Oriente y Guayana: Sabanas Bien Drenadas y Expansión Bufalina",
+      desc: "Región estratégica con pasturas mejoradas en mesas orientales y vegas del Orinoco. Presenta uno de los mayores índices de productividad en ceba intensiva y ganadería bufalina de exportación.",
+      breeds: ["Brahman", "Búfalo Mediterráneo", "Guzerat", "Brangus Tropicalizado"],
+      vocation: "Ceba Intensiva y Ganadería Bufalina",
+      assocs: "14 Asociaciones Federadas",
+      product: "Carne Premium y Lácteos de Búfala"
+    }
+  };
+
+  const tabs = document.querySelectorAll('.region-tab');
+  const display = document.getElementById('region-display');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const key = tab.getAttribute('data-region');
+      if (!key || !regionsData[key]) return;
+
+      tabs.forEach((t) => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const data = regionsData[key];
+      if (display) display.style.opacity = '0.4';
+
+      setTimeout(() => {
+        const statesEl = document.getElementById('reg-states');
+        const shareEl = document.getElementById('reg-share');
+        const titleEl = document.getElementById('reg-title');
+        const descEl = document.getElementById('reg-desc');
+        const breedsEl = document.getElementById('reg-breeds');
+        const vocationEl = document.getElementById('reg-vocation');
+        const assocsEl = document.getElementById('reg-assocs');
+        const productEl = document.getElementById('reg-product');
+
+        if (statesEl) statesEl.textContent = data.states;
+        if (shareEl) shareEl.textContent = data.share;
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl) descEl.textContent = data.desc;
+        if (breedsEl) {
+          breedsEl.innerHTML = data.breeds.map((b) => `<span class="breed-tag">${b}</span>`).join('');
+        }
+        if (vocationEl) vocationEl.textContent = data.vocation;
+        if (assocsEl) assocsEl.textContent = data.assocs;
+        if (productEl) productEl.textContent = data.product;
+
+        if (display) display.style.opacity = '1';
+      }, 120);
+    });
+  });
+</script>

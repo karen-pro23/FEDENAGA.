@@ -1,81 +1,183 @@
 ---
-// Services.astro — Compra y Venta de Ganado section
+// Services.astro — Commercial cattle showcase, filterable lots & interactive valuation calculator
 ---
 
-<section id="servicios" class="section" aria-labelledby="services-heading">
+<section id="servicios" class="section section--light" aria-labelledby="services-heading">
   <div class="container">
-    <div class="section-header">
-      <span class="badge">Nuestro Portafolio</span>
-      <h2 id="services-heading">Servicios Comerciales</h2>
+    <div class="section-header animate-on-scroll">
+      <span class="badge">Comercialización y Trazabilidad</span>
+      <h2 id="services-heading">Mercado Ganadero y Servicios Comerciales</h2>
       <p>
-        Facilitamos la compra y venta de ganado con total garantía sanitaria, 
-        legal y transparencia de precios.
+        Conectamos directamente a productores certificados con compradores, frigoríficos y centros de recría bajo estándares sanitarios y pesaje auditable.
       </p>
     </div>
 
+    <!-- Main Services Cards -->
     <div class="services-grid">
-      <!-- Compra -->
       <article class="card card--bordered service-card animate-on-scroll">
-        <div class="service-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
-          </svg>
+        <div class="service-top">
+          <div class="service-icon-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <path d="M16 10a4 4 0 01-8 0"/>
+            </svg>
+          </div>
+          <span class="badge badge--green">Garantía Sanitaria</span>
         </div>
-        <h3>Adquisición de Ganado</h3>
+        <h3>Adquisición de Lotes Certificados</h3>
         <p>
-          Ofrecemos un catálogo rigurosamente seleccionado de lotes de ganado para cría, 
-          engorde o beneficio, con total garantía sanitaria y legal. Cada animal cuenta 
-          con documentación completa y trazabilidad verificable.
+          Accedé a lotes seleccionados de ganado bovino y bufalino para cría, levante, ceba o beneficio. Cada lote cuenta con guía SADA/INSAI, ciclo de vacunación FUVAS vigente y genealogía verificable.
         </p>
         <ul class="service-features">
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Lotes certificados sanitariamente
+            Inspección veterinaria de origen y libre de brucelosis/aftosa
           </li>
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Genética de alta calidad
+            Reproductores puros (Brahman, Carora, Girolando, Senepol)
           </li>
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Asesoría personalizada
+            Logística de despacho y acompañamiento gremial
           </li>
         </ul>
-        <a href="#contacto" class="btn btn-primary service-btn">Ver Catálogo de Compra</a>
+        <a href="#vitrina-lotes" class="btn btn-primary service-btn">Ver Lotes Disponibles</a>
       </article>
 
-      <!-- Venta -->
       <article class="card card--bordered service-card animate-on-scroll">
-        <div class="service-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="12" y1="1" x2="12" y2="23"/>
-            <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-          </svg>
+        <div class="service-top">
+          <div class="service-icon-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+            </svg>
+          </div>
+          <span class="badge badge--gold">Liquidación Justa</span>
         </div>
-        <h3>Comercialización y Venta</h3>
+        <h3>Consignación y Venta Directa</h3>
         <p>
-          Ayudamos a los productores a colocar sus lotes de ganado en mercados clave, 
-          asegurando transacciones seguras, pesajes justos y cotizaciones actualizadas 
-          en tiempo real.
+          Colocamos la producción de tu finca o hato en los principales mercados nacionales y subastas asociadas, eliminando cadenas especulativas y garantizando pesaje electrónico transparente.
         </p>
         <ul class="service-features">
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Acceso a mercados nacionales
+            Valoración en tiempo real según índice referencial FEDENAGA
           </li>
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Pesaje certificado y transparente
+            Auditoría en romana y clasificación por rendimiento en canal
           </li>
           <li>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Cotizaciones en tiempo real
+            Respaldo jurídico para productores agremiados
           </li>
         </ul>
-        <a href="#contacto" class="btn btn-outline--dark service-btn">Consignar mi Lote</a>
+        <a href="#calculadora" class="btn btn-outline--dark service-btn">Simular Valor de mi Lote</a>
       </article>
+    </div>
+
+    <!-- Filterable Cattle Showcase -->
+    <div id="vitrina-lotes" class="lots-showcase animate-on-scroll">
+      <div class="lots-header">
+        <div>
+          <span class="badge">Vitrina Pecuaria Activa</span>
+          <h3>Lotes Destacados de Asociaciones Agremiadas</h3>
+        </div>
+        <div class="lot-filters" role="group" aria-label="Filtrar lotes por categoría">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="ceba">Ceba / Beneficio</button>
+          <button class="filter-btn" data-filter="levante">Cría y Levante</button>
+          <button class="filter-btn" data-filter="genetica">Alta Genética</button>
+        </div>
+      </div>
+
+      <div class="lots-grid" id="lots-grid">
+        <div class="lot-card" data-category="ceba">
+          <div class="lot-card-top">
+            <span class="lot-tag">Lote #FD-408 · Barinas</span>
+            <span class="lot-status">Verificado FUVAS</span>
+          </div>
+          <h4>45 Toros Cebados Brahman Comercial</h4>
+          <p class="lot-desc">Peso promedio de 490 kg en pie. Pastoreo rotacional con suplementación mineral. Listos para romanas frigoríficas.</p>
+          <div class="lot-specs">
+            <div><span>Cabezas</span><strong>45 Und.</strong></div>
+            <div><span>Peso Prom.</span><strong>490 kg</strong></div>
+            <div><span>Ref. / kg</span><strong>$1.85</strong></div>
+          </div>
+          <a href="#contacto" class="lot-cta">Solicitar Ficha Técnica →</a>
+        </div>
+
+        <div class="lot-card" data-category="levante">
+          <div class="lot-card-top">
+            <span class="lot-tag">Lote #FD-412 · Apure</span>
+            <span class="lot-status">Verificado FUVAS</span>
+          </div>
+          <h4>60 Mautes de Levante F1 Brahman</h4>
+          <p class="lot-desc">Lote homogéneo destetado de 235 kg promedio. Alta ganancia diaria de peso y excelente conformación cárnica.</p>
+          <div class="lot-specs">
+            <div><span>Cabezas</span><strong>60 Und.</strong></div>
+            <div><span>Peso Prom.</span><strong>235 kg</strong></div>
+            <div><span>Ref. / kg</span><strong>$1.95</strong></div>
+          </div>
+          <a href="#contacto" class="lot-cta">Solicitar Ficha Técnica →</a>
+        </div>
+
+        <div class="lot-card" data-category="genetica">
+          <div class="lot-card-top">
+            <span class="lot-tag">Lote #FD-419 · Zulia / Lara</span>
+            <span class="lot-status">Registro ASOCRICA / ASOCEBU</span>
+          </div>
+          <h4>18 Novillas Preñadas Carora & Girolando</h4>
+          <p class="lot-desc">Vientres seleccionados para doble propósito y alta producción láctea tropical. Preñez certificada por ecografía.</p>
+          <div class="lot-specs">
+            <div><span>Cabezas</span><strong>18 Und.</strong></div>
+            <div><span>Peso Prom.</span><strong>410 kg</strong></div>
+            <div><span>Modalidad</span><strong>Por Unidad</strong></div>
+          </div>
+          <a href="#contacto" class="lot-cta">Solicitar Ficha Técnica →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Lot Valuation Calculator -->
+    <div id="calculadora" class="calculator-box animate-on-scroll">
+      <div class="calc-info">
+        <span class="badge badge--gold">Herramienta para el Productor</span>
+        <h3>Simulador Referencial de Lote en Pie</h3>
+        <p>
+          Calculá al instante el valor estimado de comercialización de tu lote según la categoría animal, número de cabezas y peso promedio en romana.
+        </p>
+      </div>
+
+      <form class="calc-form" id="lot-calc-form" onsubmit="return false;">
+        <div class="calc-field">
+          <label for="calc-category">Categoría Pecuaria</label>
+          <select id="calc-category">
+            <option value="1.85">Toro Cebado en Pie ($1.85 / kg)</option>
+            <option value="1.95">Maute de Levante ($1.95 / kg)</option>
+            <option value="1.65">Vaca de Descarte / Ceba ($1.65 / kg)</option>
+            <option value="1.78">Búfalo Gordo en Pie ($1.78 / kg)</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label for="calc-heads">Cantidad de Cabezas</label>
+          <input type="number" id="calc-heads" min="1" max="1000" value="35" />
+        </div>
+
+        <div class="calc-field">
+          <label for="calc-weight">Peso Promedio (kg / animal)</label>
+          <input type="number" id="calc-weight" min="100" max="900" value="460" />
+        </div>
+
+        <div class="calc-result">
+          <span class="calc-result-label">Peso Total Estimado: <strong id="calc-total-weight">16,100 kg</strong></span>
+          <div class="calc-result-price" id="calc-total-value">Ref. $29,785.00</div>
+          <span class="calc-disclaimer">*Cálculo referencial sujeto a merma de transporte y pesaje oficial.</span>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -85,6 +187,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
   }
 
   .service-card {
@@ -92,25 +195,24 @@
     flex-direction: column;
     padding: var(--space-2xl);
     text-align: left;
-    transition: all var(--transition-base);
   }
 
-  .service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: var(--primary-light);
+  .service-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
   }
 
   .service-icon-wrap {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
     border-radius: var(--radius-lg);
     background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-warm) 100%);
     color: var(--primary);
-    margin-bottom: var(--space-lg);
   }
 
   .service-card h3 {
@@ -121,7 +223,7 @@
 
   .service-card > p {
     font-size: var(--font-size-base);
-    line-height: 1.8;
+    line-height: 1.75;
     margin-bottom: var(--space-lg);
     flex-grow: 1;
   }
@@ -129,7 +231,7 @@
   .service-features {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: 0.65rem;
     margin-bottom: var(--space-xl);
   }
 
@@ -138,7 +240,7 @@
     align-items: center;
     gap: var(--space-sm);
     font-size: var(--font-size-sm);
-    color: var(--text-muted);
+    color: var(--text-dark);
     font-weight: 500;
   }
 
@@ -151,14 +253,300 @@
     align-self: flex-start;
   }
 
-  @media (max-width: 768px) {
-    .services-grid {
+  /* Lots Showcase */
+  .lots-showcase {
+    margin-bottom: var(--space-3xl);
+  }
+
+  .lots-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+  }
+
+  .lots-header h3 {
+    font-size: var(--font-size-2xl);
+    margin: 0.4rem 0 0;
+  }
+
+  .lot-filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.55rem 1.1rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-strong);
+    background: var(--white);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+  }
+
+  .lots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .lot-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all var(--transition-base);
+  }
+
+  .lot-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+  }
+
+  .lot-card.hidden {
+    display: none;
+  }
+
+  .lot-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .lot-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .lot-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--accent-green-light);
+    color: var(--accent-green);
+  }
+
+  .lot-card h4 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .lot-desc {
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+  }
+
+  .lot-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    background: var(--bg-light);
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .lot-specs span {
+    display: block;
+    font-size: 0.68rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+  }
+
+  .lot-specs strong {
+    font-size: var(--font-size-sm);
+    color: var(--text-dark);
+  }
+
+  .lot-cta {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Calculator */
+  .calculator-box {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #241214 100%);
+    color: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-2xl);
+    align-items: center;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .calc-info h3 {
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+    margin: 0.6rem 0;
+  }
+
+  .calc-info p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: var(--font-size-base);
+    margin: 0;
+  }
+
+  .calc-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .calc-field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .calc-field label {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .calc-field select,
+  .calc-field input {
+    padding: 0.75rem 0.9rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(15, 17, 19, 0.85);
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+  }
+
+  .calc-result {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .calc-result-label {
+    font-size: var(--font-size-xs);
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .calc-result-label strong {
+    color: var(--white);
+  }
+
+  .calc-result-price {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #FDE68A;
+  }
+
+  .calc-disclaimer {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 900px) {
+    .calculator-box {
       grid-template-columns: 1fr;
     }
 
-    .service-btn {
-      align-self: stretch;
-      text-align: center;
+    .calc-form {
+      grid-template-columns: 1fr;
     }
   }
 </style>
+
+<script>
+  // Lot Category Filtering
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const lotCards = document.querySelectorAll('.lot-card');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter') || 'all';
+      filterButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      lotCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Live Lot Valuation Calculator
+  const catSelect = document.getElementById('calc-category') as HTMLSelectElement | null;
+  const headsInput = document.getElementById('calc-heads') as HTMLInputElement | null;
+  const weightInput = document.getElementById('calc-weight') as HTMLInputElement | null;
+  const totalWeightEl = document.getElementById('calc-total-weight');
+  const totalValueEl = document.getElementById('calc-total-value');
+
+  const updateCalculation = () => {
+    if (!catSelect || !headsInput || !weightInput) return;
+    const pricePerKg = parseFloat(catSelect.value) || 0;
+    const heads = Math.max(0, parseInt(headsInput.value, 10) || 0);
+    const avgWeight = Math.max(0, parseFloat(weightInput.value) || 0);
+
+    const totalWeight = heads * avgWeight;
+    const totalValue = totalWeight * pricePerKg;
+
+    if (totalWeightEl) {
+      totalWeightEl.textContent = `${totalWeight.toLocaleString('es-VE')} kg`;
+    }
+    if (totalValueEl) {
+      totalValueEl.textContent = `Ref. $${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+  };
+
+  [catSelect, headsInput, weightInput].forEach((input) => {
+    input?.addEventListener('input', updateCalculation);
+    input?.addEventListener('change', updateCalculation);
+  });
+</script>

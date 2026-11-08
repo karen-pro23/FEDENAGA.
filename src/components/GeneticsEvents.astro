@@ -1,0 +1,370 @@
+---
+// GeneticsEvents.astro — Venezuelan Tropical Cattle Breeds & National Livestock Fairs Calendar
+---
+
+<section id="genetica-ferias" class="section section--warm" aria-labelledby="genetics-heading">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge badge--gold">Biotecnología y Tradición Pecuaria</span>
+      <h2 id="genetics-heading">Genética Tropical de Élite y Circuito Nacional de Ferias</h2>
+      <p>
+        Venezuela cuenta con uno de los patrimonios genéticos adaptados al trópico más valiosos del continente, respaldado por nuestras asociaciones de criadores y ferias agropecuarias.
+      </p>
+    </div>
+
+    <!-- Tropical Breeds Bento Grid -->
+    <div class="breeds-bento animate-on-scroll">
+      <article class="breed-card breed-card--featured">
+        <div class="breed-badge-row">
+          <span class="badge badge--gold">Patrimonio Genético Venezolano</span>
+          <span class="breed-origin">Lara · Zulia · Llanos</span>
+        </div>
+        <h3>Raza Carora & Doble Propósito Tropical</h3>
+        <p>
+          Única raza lechera tropical sintética desarrollada en Venezuela, reconocida por su extraordinaria rusticidad climática, aprovechamiento de pasturas fibrosas y alta producción de sólidos lácteos.
+        </p>
+        <div class="breed-metrics">
+          <div>
+            <span>Producción Promedio</span>
+            <strong>14 – 22 L / día</strong>
+          </div>
+          <div>
+            <span>Adaptabilidad</span>
+            <strong>Trópico Seco y Húmedo</strong>
+          </div>
+          <div>
+            <span>Registro Oficial</span>
+            <strong>ASOCRICA / FEDENAGA</strong>
+          </div>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <div class="breed-badge-row">
+          <span class="badge">Líder en Carne</span>
+          <span class="breed-origin">24 Estados</span>
+        </div>
+        <h3>Brahman Rojo y Blanco</h3>
+        <p>
+          Base fundamental de la ganadería de carne nacional. Sobresale por su habilidad materna, precocidad en pastoreo extensivo y alto rendimiento en canal frigorífica.
+        </p>
+        <div class="breed-pill-list">
+          <span>ASOCEBU</span>
+          <span>Alta Ganancia Diaria</span>
+          <span>Resistencia al Calor</span>
+        </div>
+      </article>
+
+      <article class="breed-card">
+        <div class="breed-badge-row">
+          <span class="badge badge--green">Potencia en Expansión</span>
+          <span class="breed-origin">Apure · Barinas · Monagas</span>
+        </div>
+        <h3>Búfalo Murrah y Mediterráneo</h3>
+        <p>
+          Venezuela posee el mayor rebaño bufalino de Hispanoamérica, transformando sabanas inundables en carne magra y leche con altísimo rendimiento quesero.
+        </p>
+        <div class="breed-pill-list">
+          <span>CRIABUFALOS</span>
+          <span>Doble Propósito</span>
+          <span>Suelos Húmedos</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Interactive National Livestock Fairs & Auctions Calendar -->
+    <div class="fairs-panel animate-on-scroll">
+      <div class="fairs-head">
+        <div>
+          <span class="badge">Agenda Gremial y Comercial 2026</span>
+          <h3>Circuito Oficial de Ferias, Subastas y Congresos</h3>
+        </div>
+        <a href="#contacto" class="btn btn-outline--dark">Inscribir Ejemplares o Stand</a>
+      </div>
+
+      <div class="fairs-timeline">
+        <div class="fair-item">
+          <div class="fair-date">
+            <span class="fair-month">ENE / FEB</span>
+            <strong class="fair-place">San Cristóbal, Táchira</strong>
+          </div>
+          <div class="fair-body">
+            <span class="fair-org">ASOGATA · Feria Agropecuaria de San Sebastián</span>
+            <h4>Exposición Nacional de Ganado de Altura, Cebú y Subasta Élite</h4>
+            <p>Juzgamiento de razas lecheras y cárnicas, rueda de negocios binacional y exhibición de maquinaria agrícola.</p>
+          </div>
+          <div class="fair-action">
+            <span class="fair-status fair-status--open">Circuito Oficial</span>
+          </div>
+        </div>
+
+        <div class="fair-item">
+          <div class="fair-date">
+            <span class="fair-month">MAYO / JUN</span>
+            <strong class="fair-place">Valencia / Barquisimeto</strong>
+          </div>
+          <div class="fair-body">
+            <span class="fair-org">FEDENAGA · ASOCEBU · ASOCRICA</span>
+            <h4>Feria Nacional del Cebú y Encuentro de Genética Carora</h4>
+            <p>El evento cumbre de la genética bovina nacional con remates en vivo de embriones, pajuelas y reproductores puros registrados.</p>
+          </div>
+          <div class="fair-action">
+            <span class="fair-status fair-status--highlight">Inscripciones Abiertas</span>
+          </div>
+        </div>
+
+        <div class="fair-item">
+          <div class="fair-date">
+            <span class="fair-month">OCT / NOV</span>
+            <strong class="fair-place">Maracaibo / Machiques, Zulia</strong>
+          </div>
+          <div class="fair-body">
+            <span class="fair-org">FEGALAGO · GADEMA</span>
+            <h4>Expo Feria Agropecuaria del Zulia y Cuenca del Lago</h4>
+            <p>Concurso lechero oficial, simposio de ganadería regenerativa tropical y premiación a la excelencia productiva.</p>
+          </div>
+          <div class="fair-action">
+            <span class="fair-status fair-status--open">Circuito Oficial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .breeds-bento {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .breed-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+  }
+
+  .breed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .breed-card--featured {
+    background: linear-gradient(135deg, #1A1314 0%, #381014 100%);
+    color: var(--white);
+    border-color: rgba(212, 155, 53, 0.35);
+  }
+
+  .breed-card--featured h3 {
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+  }
+
+  .breed-card--featured p {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .breed-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-md);
+  }
+
+  .breed-origin {
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .breed-card--featured .breed-origin {
+    color: #FDE68A;
+  }
+
+  .breed-card h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: 0.65rem;
+  }
+
+  .breed-card p {
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .breed-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-md);
+    padding: 0.9rem;
+  }
+
+  .breed-metrics span {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 0.2rem;
+  }
+
+  .breed-metrics strong {
+    font-size: var(--font-size-xs);
+    color: #FDE68A;
+  }
+
+  .breed-pill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .breed-pill-list span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-full);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text-dark);
+  }
+
+  /* Fairs Panel */
+  .fairs-panel {
+    background: var(--white);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .fairs-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .fairs-head h3 {
+    font-size: var(--font-size-2xl);
+    margin: 0.4rem 0 0;
+  }
+
+  .fairs-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .fair-item {
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    gap: var(--space-lg);
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-radius: var(--radius-lg);
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    transition: border-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .fair-item:hover {
+    border-color: var(--primary);
+    transform: translateX(4px);
+  }
+
+  .fair-date {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--border-strong);
+    padding-right: 1rem;
+  }
+
+  .fair-month {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .fair-place {
+    font-size: var(--font-size-xs);
+    color: var(--text-muted);
+  }
+
+  .fair-org {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #966611;
+    margin-bottom: 0.2rem;
+  }
+
+  .fair-body h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .fair-body p {
+    font-size: var(--font-size-sm);
+    margin: 0;
+  }
+
+  .fair-status {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+  }
+
+  .fair-status--open {
+    background: var(--accent-green-light);
+    color: var(--accent-green);
+  }
+
+  .fair-status--highlight {
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid rgba(var(--primary-rgb), 0.25);
+  }
+
+  @media (max-width: 1024px) {
+    .breeds-bento {
+      grid-template-columns: 1fr;
+    }
+
+    .fair-item {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .fair-date {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding-right: 0;
+      padding-bottom: 0.5rem;
+    }
+  }
+</style>

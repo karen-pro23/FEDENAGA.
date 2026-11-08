@@ -1,19 +1,30 @@
 ---
-// Header.astro — Responsive navigation with glassmorphism scroll effect
+// Header.astro — Responsive navigation with glassmorphism scroll effect and live market status
 ---
 
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="#" class="header-logo" aria-label="Inicio FEDENAGA">
-      <img src="/images/logo-fedenaga.png" alt="Logo de FEDENAGA — Federación Nacional de Ganaderos de Venezuela" width="180" height="45" />
+      <img src="/images/logo-fedenaga.png" alt="Logo de FEDENAGA — Federación Nacional de Ganaderos de Venezuela" width="180" height="48" />
+      <div class="logo-meta">
+        <span class="logo-title">FEDENAGA</span>
+        <span class="logo-subtitle">Fundada en 1962</span>
+      </div>
     </a>
 
     <nav class="header-nav" aria-label="Navegación principal" id="main-nav">
       <ul class="nav-list" id="nav-list">
-        <li><a href="#nosotros" class="nav-link">Quiénes Somos</a></li>
-        <li><a href="#mision-vision" class="nav-link">Misión y Visión</a></li>
-        <li><a href="#servicios" class="nav-link">Servicios</a></li>
-        <li><a href="#contacto" class="nav-link nav-link--cta">Contacto</a></li>
+        <li><a href="#indicadores" class="nav-link">Indicadores</a></li>
+        <li><a href="#nosotros" class="nav-link">Regiones</a></li>
+        <li><a href="#servicios" class="nav-link">Mercado y Lotes</a></li>
+        <li><a href="#genetica-ferias" class="nav-link">Genética y Ferias</a></li>
+        <li><a href="#mision-vision" class="nav-link">Institución</a></li>
+        <li>
+          <a href="#contacto" class="nav-link nav-link--cta">
+            <span class="live-dot" aria-hidden="true"></span>
+            Mesa Comercial
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -38,7 +49,7 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 3px solid var(--primary);
     transition: all var(--transition-base);
     height: var(--header-height);
@@ -47,11 +58,12 @@
   }
 
   .site-header.scrolled {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.88);
     box-shadow: var(--shadow-md);
-    border-bottom-color: transparent;
+    border-bottom-color: rgba(139, 29, 34, 0.2);
+    height: 70px;
   }
 
   .header-inner {
@@ -61,20 +73,50 @@
     width: 100%;
   }
 
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
   .header-logo img {
-    height: 42px;
+    height: 50px;
     width: auto;
-    transition: opacity var(--transition-fast);
+    transition: transform var(--transition-fast);
   }
 
   .header-logo:hover img {
-    opacity: 0.85;
+    transform: scale(1.03);
+  }
+
+  .logo-meta {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid var(--border);
+    padding-left: 0.75rem;
+  }
+
+  .logo-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--primary);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+
+  .logo-subtitle {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
   }
 
   .nav-list {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: 1.75rem;
   }
 
   .nav-link {
@@ -94,8 +136,8 @@
     bottom: -2px;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: var(--primary);
+    height: 2.5px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-gold));
     transition: width var(--transition-base);
     border-radius: var(--radius-full);
   }
@@ -109,10 +151,14 @@
   }
 
   .nav-link--cta {
-    background-color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
     color: var(--white) !important;
-    padding: 0.55rem 1.3rem;
-    border-radius: var(--radius-sm);
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.22);
     transition: all var(--transition-base);
   }
 
@@ -121,9 +167,17 @@
   }
 
   .nav-link--cta:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(var(--primary-rgb), 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(var(--primary-rgb), 0.35);
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4ADE80;
+    box-shadow: 0 0 8px #4ADE80;
+    animation: pulseDot 2s infinite;
   }
 
   /* Hamburger */
@@ -160,7 +214,7 @@
   }
 
   /* Mobile Navigation */
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .hamburger {
       display: flex;
     }
@@ -169,11 +223,11 @@
       position: fixed;
       top: 0;
       right: -100%;
-      width: 280px;
+      width: 300px;
       height: 100vh;
       flex-direction: column;
       justify-content: center;
-      gap: var(--space-xl);
+      gap: var(--space-lg);
       background: var(--white);
       box-shadow: var(--shadow-lg);
       transition: right var(--transition-base);
@@ -190,14 +244,13 @@
     }
 
     .nav-link--cta {
-      text-align: center;
+      justify-content: center;
       width: 100%;
     }
   }
 </style>
 
 <script>
-  // Hamburger menu toggle
   const hamburger = document.getElementById('hamburger-btn');
   const navList = document.getElementById('nav-list');
 
@@ -209,7 +262,6 @@
       hamburger.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
     });
 
-    // Close on link click
     navList.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navList.classList.remove('open');
@@ -218,7 +270,6 @@
       });
     });
 
-    // Close on outside click
     document.addEventListener('click', (e) => {
       if (!hamburger.contains(e.target as Node) && !navList.contains(e.target as Node)) {
         navList.classList.remove('open');
@@ -227,7 +278,6 @@
       }
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         navList.classList.remove('open');
@@ -237,11 +287,10 @@
     });
   }
 
-  // Glassmorphism scroll effect
   const header = document.getElementById('site-header');
   if (header) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 40) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
